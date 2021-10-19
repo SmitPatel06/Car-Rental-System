@@ -43,7 +43,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,6 +75,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\CRS.mdf" />
+    <Content Include="App_Data\CRS_log.ldf">
+      <DependentUpon>CRS.mdf</DependentUpon>
+    </Content>
     <Content Include="bin\CarRentalSystem.dll" />
     <Content Include="bin\CarRentalSystem.pdb" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
@@ -129,6 +141,8 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="details.aspx" />
     <Content Include="details.css" />
+    <Content Include="feedback.aspx" />
+    <Content Include="feedback.css" />
     <Content Include="forloginpage.css" />
     <Content Include="home.aspx" />
     <Content Include="images\car.jpg" />
@@ -138,6 +152,7 @@
     <Content Include="images\login.png" />
     <Content Include="images\login1.jpg" />
     <Content Include="images\register.jpg" />
+    <Content Include="images\thank-you.jpg" />
     <Content Include="images\userdetail.png" />
     <Content Include="login.aspx" />
     <Content Include="obj\Debug\CarRentalSystem.csproj.FileListAbsolute.txt" />
@@ -261,6 +276,14 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="models\CarModel.cs" />
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -289,6 +312,7 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="models\register.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="register.aspx.cs">

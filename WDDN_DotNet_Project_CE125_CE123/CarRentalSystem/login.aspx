@@ -55,6 +55,9 @@
         .auto-style10 {
             font-size: large;
         }
+        .auto-style11 {
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -96,6 +99,9 @@
         </table>
         <asp:Button ID="Button1" runat="server" CssClass="auto-style7" Height="46px" Text="Sign in" Width="122px" OnClick="Button1_Click" />
         <p>Don't Have an Account? <a href="register.aspx" style="color:chartreuse">Sign Up</a></p>
+        <p>&nbsp;</p>
+        <p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

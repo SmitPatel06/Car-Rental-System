@@ -50,10 +50,7 @@
         }
         .auto-style14 {
             height: 26px;
-            width: 198px;
-        }
-        .auto-style15 {
-            width: 198px;
+            width: 220px;
         }
         .auto-style16 {
             width: 258px;
@@ -80,6 +77,9 @@
         .auto-style22 {
             width: 154px;
         }
+        .auto-style23 {
+            width: 220px;
+        }
     </style>
 </head>
 <body>
@@ -101,7 +101,7 @@
             <td class="auto-style12">
                 <asp:TextBox ID="email" runat="server" Width="180px"></asp:TextBox>
             </td>
-            <td class="auto-style15">
+            <td class="auto-style23">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="email" ErrorMessage="*Enter the Email" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
             <td>
@@ -110,14 +110,22 @@
         </tr>
         <tr>
             <td class="auto-style22">Book Date:-</td>
-            <td class="auto-style12">&nbsp;</td>
-            <td class="auto-style15">&nbsp;</td>
+            <td class="auto-style12">
+                <asp:TextBox ID="bookdate" runat="server" Width="180px"></asp:TextBox>
+            </td>
+            <td class="auto-style23">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="bookdate" ErrorMessage="*Write the Booking Date." Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style21">Return Date:-</td>
-            <td class="auto-style11"></td>
-            <td class="auto-style14"></td>
+            <td class="auto-style11">
+                <asp:TextBox ID="returndate" runat="server" Width="180px"></asp:TextBox>
+            </td>
+            <td class="auto-style14">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="returndate" ErrorMessage="*Write the Return Date" Font-Bold="True" ForeColor="Red"></asp:RequiredFieldValidator>
+            </td>
             <td class="auto-style2"></td>
         </tr>
         </table>
